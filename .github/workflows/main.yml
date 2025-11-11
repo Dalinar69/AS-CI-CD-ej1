@@ -1,0 +1,20 @@
+name: Workflow
+
+on: 
+  push:
+    branches:
+      - main
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar
+        uses: actions/checkout@v5
+
+      - name: Instalar pytest
+        run: pip install pytest
+
+      - name: Ejecutar test
+        run: python3 test.py
+      
+
