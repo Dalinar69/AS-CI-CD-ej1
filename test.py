@@ -15,7 +15,7 @@ def test_setbalance():
     obj.set_balance(40)
     assert obj.get_balance() == 40
 
-def test_1000():
+def test_100():
     obj = Wallet(0)
     obj.add1000()
     assert obj.get_balance() == 1000
